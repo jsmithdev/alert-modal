@@ -2,7 +2,7 @@
 
 A modal to alert a user to something utilizing the app builder (LWC)
 
-![screenshot](./resources/Screenshot_20201207.png)
+![screenshot](https://raw.githubusercontent.com/jsmithdev/alert-modal/master/resources/Screenshot_20201207.png)
 
 ## Properties
 
