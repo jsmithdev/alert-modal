@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <isExposed>true</isExposed>
+
+    <masterLabel>Alert Modal</masterLabel>
+
+    <description>Modal to alert a user to something</description>
+
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage, lightning__AppPage, lightningCommunity__Default">
+            <property 
+                name="title" 
+                type="String"
+                label="Title" 
+                description="Title for modal"
+                default="Default Text"
+            ></property>
+            <property 
+                name="body" 
+                type="String"
+                label="Body" 
+                description="Text for modal body"
+                default="Default Text"
+            ></property>
+            <property 
+                required="true" 
+                name="field_to_check" 
+                type="String"
+                label="Object &amp; Field API Name to check" 
+                description="Object.Field to check if true. Example: User.IsActive on a User record. Can be a checkbox formula"
+                placeholder="Enter in Object.Field format..."
+            ></property>
+            <property 
+                name="size" 
+                label="Size" 
+                description="Size of the modal. Defaults to small."
+                type="String" 
+                datasource="small,medium,large"
+                default="small"
+            ></property>
+            <property 
+                name="variant"
+                type="String"
+                label="Variant"
+                description="Color variant of the header"
+                default="neutral"
+                datasource="neutral,info,success,error"
+            ></property>
+            
+        </targetConfig>
+    </targetConfigs>
+    
+</LightningComponentBundle>

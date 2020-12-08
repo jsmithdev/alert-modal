@@ -1,0 +1,12 @@
+.info {
+    color: white;
+    background: rgba(0, 97, 149, 1);
+}
+.success {
+    color: white;
+    background: rgb(4, 132, 75);
+}
+.error {
+    color: white;
+    background: rgba(194, 0, 0, 1);
+}
